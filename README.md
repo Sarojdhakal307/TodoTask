@@ -11,7 +11,7 @@ A simple Todo app built using **React Native** and **Expo** that supports **dark
 
 ## Development
 
-- Developed and tested on **iOS device** using Expo.
+- Developed and tested on **iOS device** using Expo Go.
 - Uses **React Navigation Tabs** for navigation.
 - Icons and UI components are theme-aware for consistent dark/light mode experience.
 

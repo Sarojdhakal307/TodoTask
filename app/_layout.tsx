@@ -8,12 +8,13 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import "react-native-reanimated";
 
+import SplashSequence from "@/components/SplashSequence";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 import { AuthProvider, useAuth } from "./AuthContext";
 
 export const unstable_settings = {
   anchor: "(tabs)",
-};
+}; // Import it at top
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
@@ -21,6 +22,7 @@ function RootLayoutNav() {
   const segments = useSegments();
   const router = useRouter();
   const [mounted, setMounted] = useState<boolean>(false);
+  const [showSplash, setShowSplash] = useState(true); // new state
 
   useEffect(() => {
     setMounted(true);
@@ -31,7 +33,6 @@ function RootLayoutNav() {
 
     const inAuthGroup = segments[0] === "auth";
 
- 
     if (!user && !inAuthGroup) {
       router.replace("/auth/login");
     } else if (user && inAuthGroup) {
@@ -39,8 +40,9 @@ function RootLayoutNav() {
     }
   }, [user, segments, mounted, loading, router]);
 
-  if (!mounted || loading) {
-    return null; // or splash screen
+  if (!mounted || loading || showSplash) {
+    // Show the 3 splash screens here
+    return <SplashSequence onFinish={() => setShowSplash(false)} />;
   }
 
   return (
@@ -50,7 +52,6 @@ function RootLayoutNav() {
     </ThemeProvider>
   );
 }
-
 export default function RootLayout() {
   return (
     <AuthProvider>
