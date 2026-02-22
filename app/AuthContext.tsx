@@ -37,16 +37,10 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       try {
         const token = await AsyncStorage.getItem("token");
         const userId = await AsyncStorage.getItem("userId");
-        console.log(
-          "Restoring session with token:",
-          token,
-          "and userId:",
-          userId,
-        );
+       
 
         if (token && userId) {
           const res = await api.get<User>(`/users/${userId}`);
-          console.log("User restored:", res.data);
           setUser(res.data);
         }
       } catch (error) {

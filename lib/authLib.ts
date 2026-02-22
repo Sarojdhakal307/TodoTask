@@ -13,8 +13,6 @@ export const getTokens = async () => {
 };
 
 export const refreshToken = async (): Promise<string> => {
-  console.log("🔄 Refreshing fake token...");
-
   return new Promise((resolve) => {
     setTimeout(() => {
       fakeAccessToken = "fake-access-token-" + Date.now();

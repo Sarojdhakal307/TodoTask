@@ -20,7 +20,6 @@ export default function LogoutScreen() {
       logout();
       router.replace("/auth/login");
     } catch (error) {
-      console.log("Logout Error:", error);
       setLoggingOut(false);
     }
   };

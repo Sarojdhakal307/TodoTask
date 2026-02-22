@@ -31,11 +31,7 @@ function RootLayoutNav() {
 
     const inAuthGroup = segments[0] === "auth";
 
-    console.log("Auth check:", {
-      user,
-      segments,
-      inAuthGroup,
-    });
+ 
     if (!user && !inAuthGroup) {
       router.replace("/auth/login");
     } else if (user && inAuthGroup) {
