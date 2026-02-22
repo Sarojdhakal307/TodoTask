@@ -1,50 +1,25 @@
-# Welcome to your Expo app 👋
+# Todo App (React Native - Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple Todo app built using **React Native** and **Expo** that supports **dark and light modes**.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Add, toggle, and delete todos.
+- Filter todos by **All**, **Completed**, and **Incomplete**.
+- Login screen with form validation using **option 2** from the task instructions.
+- Fully responsive and supports **dark/light themes** based on device settings.
 
-   ```bash
-   npm install
-   ```
+## Development
 
-2. Start the app
+- Developed and tested on **iOS device** using Expo.
+- Uses **React Navigation Tabs** for navigation.
+- Icons and UI components are theme-aware for consistent dark/light mode experience.
 
-   ```bash
-   npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+- React Native (Expo)
+- TypeScript
+- React Navigation
+- react-hook-form & Zod for form validation
+- Custom theming with `useColorScheme`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
