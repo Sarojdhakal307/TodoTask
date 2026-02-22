@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
 
+// Light Mode
 export const lightStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e8f5e9", 
+    backgroundColor: "#e8f5e9",
     justifyContent: "center",
     padding: 20,
   },
@@ -19,7 +20,7 @@ export const lightStyles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#2e7d32", // dark green
+    color: "#2e7d32",
     textAlign: "center",
     marginBottom: 8,
   },
@@ -48,36 +49,28 @@ export const lightStyles = StyleSheet.create({
     marginTop: 8,
   },
   buttonText: {
-    color: "#ffffff",
+    color: "#fff",
     fontSize: 18,
     fontWeight: "600",
   },
-  forgotText: {
-    color: "#4caf50",
+  errorText: {
+    color: "#ff4d4f",
+    marginBottom: 8,
+    fontSize: 14,
+  },
+  apiErrorText: {
+    color: "#d32f2f",
     textAlign: "center",
-    marginTop: 16,
+    marginBottom: 12,
     fontSize: 14,
-  },
-  footer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: 24,
-  },
-  footerText: {
-    color: "#6d907a",
-    fontSize: 14,
-  },
-  signupText: {
-    color: "#2e7d32",
-    fontSize: 14,
-    fontWeight: "600",
   },
 });
 
+// Dark Mode
 export const darkStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f1f17", // deep green-black
+    backgroundColor: "#0f1f17",
     justifyContent: "center",
     padding: 20,
   },
@@ -122,28 +115,19 @@ export const darkStyles = StyleSheet.create({
     marginTop: 8,
   },
   buttonText: {
-    color: "#062017",
+    color: "#fff",
     fontSize: 18,
     fontWeight: "600",
   },
-  forgotText: {
-    color: "#7fd3a6",
+  errorText: {
+    color: "#ff6f61",
+    marginBottom: 8,
+    fontSize: 14,
+  },
+  apiErrorText: {
+    color: "#ff6f61",
     textAlign: "center",
-    marginTop: 16,
+    marginBottom: 12,
     fontSize: 14,
-  },
-  footer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: 24,
-  },
-  footerText: {
-    color: "#9bbfb0",
-    fontSize: 14,
-  },
-  signupText: {
-    color: "#b9e4c9",
-    fontSize: 14,
-    fontWeight: "600",
   },
 });
