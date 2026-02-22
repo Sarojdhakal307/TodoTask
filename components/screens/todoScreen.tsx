@@ -3,17 +3,18 @@ import { darkTheme, lightTheme } from "@/constants/theme";
 import { styles } from "@/styles/todo.style";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
-    ActivityIndicator,
-    FlatList,
-    RefreshControl,
-    StatusBar,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    useColorScheme,
-    View,
+  ActivityIndicator,
+  FlatList,
+  RefreshControl,
+  StatusBar,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  useColorScheme,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { IconSymbol } from "../ui/icon-symbol";
 
 export default function TodoScreen() {
   const colorScheme = useColorScheme();
@@ -62,7 +63,7 @@ export default function TodoScreen() {
     }
   }, [todos, filter]);
 
-// Create, toggle and delete todo functions
+  // Create, toggle and delete todo functions
 
   const addTodo = () => {
     if (!newTodo.trim()) return;
@@ -94,6 +95,7 @@ export default function TodoScreen() {
       <TouchableOpacity
         style={styles.todoContent}
         onPress={() => toggleTodo(item.id)}
+        activeOpacity={0.7}
       >
         <View
           style={[
@@ -113,8 +115,12 @@ export default function TodoScreen() {
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => deleteTodo(item.id)}>
-        <Text style={{ color: theme.danger, fontSize: 18 }}>✕</Text>
+      <TouchableOpacity onPress={() => deleteTodo(item.id)} activeOpacity={0.7}>
+        <IconSymbol
+          name="trash.fill" // use a trash icon
+          size={20} // adjust size to fit nicely
+          color={theme.danger} // match your theme danger color
+        />
       </TouchableOpacity>
     </View>
   );
@@ -136,6 +142,7 @@ export default function TodoScreen() {
         <TouchableOpacity
           onPress={fetchTodos}
           style={[styles.retryBtn, { backgroundColor: theme.primary }]}
+          activeOpacity={0.7}
         >
           <Text style={{ color: "#fff" }}>Retry</Text>
         </TouchableOpacity>

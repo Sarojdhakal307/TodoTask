@@ -73,8 +73,8 @@ export default function LoginScreen() {
             showsVerticalScrollIndicator={false}
           >
             <View style={styles.card}>
-              <Text style={styles.title}>Welcome Back</Text>
-              <Text style={styles.subtitle}>Login to your account</Text>
+              <Text style={styles.title}>Welcome </Text>
+              <Text style={styles.subtitle}>Login to your Todo account</Text>
 
               {/* EMAIL */}
               <Controller
@@ -122,6 +122,7 @@ export default function LoginScreen() {
                       <TouchableOpacity
                         style={{ position: "absolute", right: 10, top: 25 }}
                         onPress={() => setShowPassword(!showPassword)}
+                        activeOpacity={0.7}
                       >
                         <Feather
                           name={showPassword ? "eye" : "eye-off"}
@@ -159,6 +160,7 @@ export default function LoginScreen() {
                 style={styles.button}
                 onPress={handleSubmit(onSubmit)}
                 disabled={isPending}
+                activeOpacity={0.7}
               >
                 {isPending ? (
                   <ActivityIndicator color="#fff" />
